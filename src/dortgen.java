@@ -23,4 +23,22 @@ public class dortgen {
 
     // her bir degisken icin get set fonksiyonları yazilir(duruma göre bazıları
     // yazılmayabilir)
+    // get ile başlayanlar değer öğrenmek için yazılır (geri değer döndürür)
+    // set ile başlayanlar değişken değerini değiştirmek için yazılır
+
+    public double getGenislik() {
+        return this.genislik;
+    }
+
+    public double getYukseklik() {
+        return this.getYukseklik();
+    }
+
+    public void setGenislik(double w) {
+        this.genislik = w;
+    }
+
+    public void setYukseklik(double w) {
+        this.yukseklik = w;
+    }
 }
