@@ -1,15 +1,27 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        ogrenci o1; // tanımlama
-        // o1 = new ogrenci();
-        // bellekte nesnesi olusturuldu
+        dortgen d1 = new dortgen();
+        d1.boyutGoster();
 
-        o1 = new ogrenci(1234, "Sude", "Sude", 20);
+        // d1.genislik = 7;// dogrudan erisim doğru değil
+        // d1.boyutGoster();
 
-        System.out.println(o1.ogrAd);
-        System.out.println(o1.ogrSoyad);
-        System.out.println(o1.ogrNo);
-        System.out.println(o1.ogrYas);
+        dortgen d2 = new dortgen(5);
+        d2.boyutGoster();
+
+        dortgen d3 = new dortgen(4, 10);
+        d3.boyutGoster();
+
+        // ogrenci o1; // tanımlama
+        // // o1 = new ogrenci();
+        // // bellekte nesnesi olusturuldu
+
+        // o1 = new ogrenci(1234, "Sude", "Sude", 20);
+
+        // System.out.println(o1.ogrAd);
+        // System.out.println(o1.ogrSoyad);
+        // System.out.println(o1.ogrNo);
+        // System.out.println(o1.ogrYas);
 
         // o1.ogrNo = 1234;
         // o1.ogrAd = "Sude";
