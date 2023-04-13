@@ -1,18 +1,26 @@
-## Getting Started
+# Data Structures
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Bu proje, temel veri yapılarını içeren Java modüllerini içerir.
 
-## Folder Structure
+### Kullanım
 
-The workspace contains two folders by default, where:
+Kodunuzda bir veri yapısını kullanmak için, öncelikle ilgili modülü içe aktarmanız gerekir. Örneğin, listeler için lists modülünü kullanmak istiyorsanız, şu şekilde içe aktarabilirsiniz:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+<div>
+TBListe mylist = new TBListe();
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+        mylist.listele();
+        mylist.basaEkle(10);
+        mylist.basaEkle(20);
+        mylist.basaEkle(5);
+        mylist.sonaEkle(30);
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+</div>
 
-## Dependency Management
+### Desteklenen Veri Yapıları
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Linked List
+Stack
+Queue
+Binary Search Tree
+Hash Table
