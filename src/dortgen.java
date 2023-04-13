@@ -38,6 +38,14 @@ public class dortgen {
         this.genislik = w;
     }
 
+    public double alanHesapla() {
+        return this.genislik * this.yukseklik;
+    }
+
+    public double cevreHesapla() {
+        return (this.genislik + this.yukseklik) * 2;
+    }
+
     public void setYukseklik(double w) {
         this.yukseklik = w;
     }

@@ -2,15 +2,27 @@ public class App {
     public static void main(String[] args) throws Exception {
         dortgen d1 = new dortgen();
         d1.boyutGoster();
+        d1.setGenislik(7);
+        d1.boyutGoster();
+        System.out.println("alan:" + d1.alanHesapla());
+        System.out.println("cevre:" + d1.cevreHesapla());
 
         // d1.genislik = 7;// dogrudan erisim doğru değil
         // d1.boyutGoster();
 
         dortgen d2 = new dortgen(5);
         d2.boyutGoster();
+        d2.setYukseklik(10);
+        d2.boyutGoster();
+        System.out.println("alan:" + d2.alanHesapla());
+        System.out.println("cevre:" + d2.cevreHesapla());
 
-        dortgen d3 = new dortgen(4, 10);
+        dortgen d3 = new dortgen(4, 16);
         d3.boyutGoster();
+        System.out.println("alan:" + d3.alanHesapla());
+        System.out.println("cevre:" + d3.cevreHesapla());
+
+        System.out.println(d3.getYukseklik());
 
         // ogrenci o1; // tanımlama
         // // o1 = new ogrenci();
