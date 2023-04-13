@@ -31,6 +31,19 @@ public class TBListe {
     }
 
     // listedeki eleman sayısını hesaplama
+    // public void elemanSayisi(int a) {
+    // Dugum temp = this.ilk;
+    // if (temp == null) {
+    // System.out.println("liste boş");
+    // return;
+    // }
+    // while (temp != null) {
+    // a+1;
+    // temp.setSonraki(temp);
+    // }
+    // System.out.println(a);
+
+    // }
 
     // listedeki tüm elemanların değerlerini ekrana yazma
     public void listele() {
