@@ -12,7 +12,7 @@ public class Dugum {
         this.sonraki = null;
     }
     // constructor yazarken hangi işlemler otomatik gerçekleştirilsin bunu düşünerek
-    // yazılır.
+    // yazılır. Yapılandırıcı fonksiyonu olmayan class yok.
 
     public void yazdir() {
         System.out.println(" " + this.veri);

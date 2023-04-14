@@ -13,5 +13,12 @@ public class App {
         mylist.basaEkle(20);
         mylist.basaEkle(5);
         mylist.sonaEkle(30);
+
+        Dugum d = new Dugum(50);
+        mylist.basaEkle(d);
+
+        Dugum dd = new Dugum(60);
+        mylist.sonaEkle(dd);
+        mylist.listele();
     }
 }

@@ -1,8 +1,8 @@
 public class TBListe {
-    private Dugum ilk;
+    private Dugum ilk; // listenin başlangıcını tutan değişkendir.
 
     public TBListe() {
-        this.ilk = null;
+        this.ilk = null; // liste boş olarak oluşturulur.
     }
 
     // liste basina eleman ekleme
@@ -12,6 +12,11 @@ public class TBListe {
         // yeni.setVeri(deger);
         yeni.setSonraki(this.ilk);// yesil bağlantı
         this.ilk = yeni;// mavi bağlantı
+    }
+
+    public void basaEkle(Dugum yeni) {
+        yeni.setSonraki(this.ilk);
+        this.ilk = yeni;
     }
 
     // liste sonuna eleman ekleme
@@ -28,6 +33,20 @@ public class TBListe {
         }
         temp.setSonraki(yeni);
 
+    }
+
+    public void sonaEkle(Dugum yeni) {
+        // dugum olusturma isi haric gerisi aynı
+        if (this.ilk == null) {
+            this.ilk = yeni;
+            return;
+        }
+        Dugum temp = this.ilk;
+        while (temp.getSonraki() != null) {
+            temp = temp.getSonraki();
+
+        }
+        temp.setSonraki(yeni);
     }
 
     // listedeki eleman sayısını hesaplama
@@ -57,6 +76,6 @@ public class TBListe {
             // temp=temp.sonraki;
             temp.setSonraki(temp);
         }
-
+        System.out.println("----------");
     }
 }
