@@ -21,6 +21,9 @@ public class App {
 
         Dugum dd = new Dugum(60);
         mylist.sonaEkle(dd);
+
+        mylist.arayaEkle(70, 9);
+
         mylist.listele();
     }
 }
