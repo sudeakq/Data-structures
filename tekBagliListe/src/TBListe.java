@@ -98,5 +98,15 @@ public class TBListe {
                        // null olarak dönmeli
 
     }
+    // odev:aranan degerden listede kac tane oldugunu geri donduren fonksiyonu kodla
+    // elemansay()
 
+    // degeri,listede herhangi bir indekse ekleyen fonk
+    public void arayaEkle(int deger, int indis) {
+        if (this.ilk == null) {
+            this.basaEkle(deger);
+            return;
+        }
+
+    }
 }
