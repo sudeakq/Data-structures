@@ -13,6 +13,8 @@ public class App {
         mylist.basaEkle(20);
         mylist.basaEkle(5);
         mylist.sonaEkle(30);
+        System.out.println("Lİste eleman sayisi:");
+        mylist.listeElemanSayisi();
 
         Dugum d = new Dugum(50);
         mylist.basaEkle(d);

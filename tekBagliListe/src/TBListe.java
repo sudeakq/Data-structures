@@ -49,20 +49,24 @@ public class TBListe {
         temp.setSonraki(yeni);
     }
 
-    // listedeki eleman sayısını hesaplama
-    // public void elemanSayisi(int a) {
-    // Dugum temp = this.ilk;
-    // if (temp == null) {
-    // System.out.println("liste boş");
-    // return;
-    // }
-    // while (temp != null) {
-    // a+1;
-    // temp.setSonraki(temp);
-    // }
-    // System.out.println(a);
+    // ODEV
 
-    // }
+    // listedeki eleman sayısını hesaplama
+    public void listeElemanSayisi() {
+        int sayac = 0;
+        Dugum temp = this.ilk;
+        // bos mu diye kontrol etmeye gerek yok ama yine de yazdım.
+        if (temp == null) {
+            System.out.println("liste boş");
+            return;
+        }
+        while (temp != null) {
+            sayac++;
+            temp = temp.getSonraki();
+        }
+        System.out.println(sayac);
+    }
+    // ODEV BITIS
 
     // listedeki tüm elemanların değerlerini ekrana yazma
     public void listele() {
@@ -78,4 +82,21 @@ public class TBListe {
         }
         System.out.println("----------");
     }
+
+    // listede bir değeri arar ve bulduğunda o düğümü geri döndürür
+    public Dugum elemanBul(int deger) {
+        Dugum temp = this.ilk;
+        Dugum bulunan = null;
+        while (temp != null) {
+            if (temp.getVeri() != deger) {
+                temp = temp.getSonraki();
+            } else {
+                return temp;
+            }
+        }
+        return bulunan;// aranan bulunsa da bulunmasa da bir deger dönmek zorunda dugum tipinde veya
+                       // null olarak dönmeli
+
+    }
+
 }
