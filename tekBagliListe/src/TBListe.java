@@ -100,25 +100,26 @@ public class TBListe {
     }
 
     // degeri,listede herhangi bir indekse ekleyen fonk
-    public void arayaEkle(int deger, int indis) {
-        if (this.ilk == null || (indis == 1)) {
-            this.basaEkle(deger);
-            return;
-        }
-        Dugum yeni = new Dugum(deger);
-        Dugum temp = this.ilk;
-        int sayac = 1;
-        while (temp.getSonraki() != null) {// eklenecek yerin bir önceki dugumune tempin konumlandırılması işlemi
-            if (sayac + 1 == indis) {
-                break;
-            }
-            sayac++;
-            temp = temp.getSonraki();
-        }
-        yeni.setSonraki(temp.getSonraki());// yesil baglanti
-        temp.setSonraki(yeni);// mavi baglanti
+    // public void arayaEkle(int deger, int indis) {
+    // if (this.ilk == null || (indis == 1)) {
+    // this.basaEkle(deger);
+    // return;
+    // }
+    // Dugum yeni = new Dugum(deger);
+    // Dugum temp = this.ilk;
+    // int sayac = 1;
+    // while (temp.getSonraki() != null) {// eklenecek yerin bir önceki dugumune
+    // tempin konumlandırılması işlemi
+    // if (sayac + 1 == indis) {
+    // break;
+    // }
+    // sayac++;
+    // temp = temp.getSonraki();
+    // }
+    // yeni.setSonraki(temp.getSonraki());// yesil baglanti
+    // temp.setSonraki(yeni);// mavi baglanti
 
-    }
+    // }
 
     public int elemanSil(int deger) {
         if (this.ilk == null) {
@@ -160,4 +161,37 @@ public class TBListe {
         }
         return counter;
     }
+
+    // ODEV2:
+    public void arayaEkle(int deger, int indis) {
+        if (this.ilk == null || (indis <= 1)) {
+            this.basaEkle(deger);
+            return;
+        }
+        Dugum yeni = new Dugum(deger);
+        Dugum onceki = null;
+        Dugum temp = this.ilk;
+        int sayac = 1;
+        while (temp.getSonraki() != null) {// eklenecek yerin bir önceki dugumune tempin konumlandırılması işlemi
+            if (sayac + 1 == indis) {
+                break;
+            }
+            onceki = temp;
+            temp = temp.getSonraki();
+            sayac++;
+        }
+        if (temp == null && sayac == indis) {// eklenecek dugum son dugumse
+            onceki.setSonraki(yeni);
+            yeni.setSonraki(null);
+        } else if (temp != null)// eklenecek dugum aradaysa
+        {
+            onceki.setSonraki(yeni);
+            yeni.setSonraki(temp);
+        } else// indis listede yoksa
+        {
+            System.out.println("listede bu indis yok");
+        }
+
+    }
+
 }
