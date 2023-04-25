@@ -146,4 +146,18 @@ public class TBListe {
         temp.setSonraki(temp.getSonraki().getSonraki());
         return 0;
     }
+
+    /// ODEVLER///
+    // ODEV1:
+    public int kacTaneDugum(int deger) {
+        Dugum temp = this.ilk;
+        int counter = 0;
+        while (temp != null) {
+            if (temp.getVeri() == deger) {
+                counter++;
+            }
+            temp = temp.getSonraki();
+        }
+        return counter;
+    }
 }
