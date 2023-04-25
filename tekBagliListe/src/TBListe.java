@@ -194,4 +194,29 @@ public class TBListe {
 
     }
 
+    // ODEV3:
+    public void siraliEkle(int deger) {
+        if (this.ilk == null) { // liste boşsa
+            this.basaEkle(deger);
+            return;
+        }
+        Dugum yeni = new Dugum(deger);
+        Dugum temp = this.ilk;
+        Dugum onceki = null;
+        while (temp != null && temp.getVeri() < deger) { // sıralı eklemek için eklenecek konumun bulunması
+            onceki = temp;
+            temp = temp.getSonraki();
+        }
+        if (onceki == null) { // eklenecek düğüm listenin başına eklenecek
+            yeni.setSonraki(this.ilk);
+            this.ilk = yeni;
+        } else if (temp == null) { // eklenecek düğüm listenin sonuna eklenecek
+            onceki.setSonraki(yeni);
+            yeni.setSonraki(null);
+        } else { // eklenecek düğüm listenin ortasına eklenecek
+            onceki.setSonraki(yeni);
+            yeni.setSonraki(temp);
+        }
+    }
+
 }
