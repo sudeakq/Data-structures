@@ -25,5 +25,16 @@ public class App {
         mylist.arayaEkle(70, 9);
 
         mylist.listele();
+
+        int sil = 50;
+        int sonuc = mylist.elemanSil(sil);
+        if (sonuc == 0) {
+            System.out.println(sil + "listeden silindi");
+        } else if (sonuc == -1) {
+            System.out.println("liste bos");
+        } else if (sonuc == -2) {
+            System.out.println(sil + "listede bulunamadi");
+        }
+
     }
 }
