@@ -143,12 +143,17 @@ public class TBListe {
             this.ilk = this.ilk.getSonraki();
             return 0;
         }
-        Dugum temp=this.ilk;
-        while(){
-            temp=temp.getSonraki();
+        Dugum temp = this.ilk;
+        while (temp.getSonraki().getVeri() != deger) {
+            // liste sonuna geldik mi kontrolü
+            if (temp.getSonraki().getSonraki() == null) {
+                return -2;
+            }
+            temp = temp.getSonraki();
         }
-        // if (elemanBul(deger) == 0) { // tempin üzerinde konumlandığı için silinemez fonk kullanılamaz
-        //     return -2;
-        // }
+        // if (elemanBul(deger) == 0) { // tempin üzerinde konumlandığı için silinemez
+        // fonk kullanılamaz
+        // return -2;
+        // } o ankıni değil sonraki kontrol edilmeli
     }
 }
