@@ -125,4 +125,9 @@ public class TBListe {
     // yazılması
     // odev3: araya ekle fonk degerleri sayisal olarak sıralı ekleyecek sekilde
     // yazılacak (indis parametresi olmayan)
+    // odev4:verilen değeri listeden silen fonk yaz (1+ varsa hepsini silmeli)
+    // 1- liste bos olabilir
+    // 2- listenin ilk elemanı silinirse liste basi silinecektir
+    // 3- silinecek değer listede olmayabilir
+    // 4- değer listede vardır ve silinir
 }
