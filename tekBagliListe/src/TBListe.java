@@ -119,6 +119,7 @@ public class TBListe {
         temp.setSonraki(yeni);// mavi baglanti
 
     }
+
     // odev:aranan degerden listede kac tane oldugunu geri donduren fonksiyonu kodla
     // elemansay()
     // odev2: araya ekle fonk sona ekle kullanılarak revize edilerek tekrar
@@ -130,4 +131,24 @@ public class TBListe {
     // 2- listenin ilk elemanı silinirse liste basi silinecektir
     // 3- silinecek değer listede olmayabilir
     // 4- değer listede vardır ve silinir
+    // silme işlemi başarılı ise fonk geriye 0 döndürsün
+    // liste bos ise -1 döndürsün
+    // eleman bulunamazsa yani silinemezse -2 döndürsün
+    public int elemanSil(int deger) {
+        if (this.ilk == null) {
+            return -1;
+        }
+        if (this.ilk.getVeri() == deger)// listenin ilk elemanı silinecekse
+        {
+            this.ilk = this.ilk.getSonraki();
+            return 0;
+        }
+        Dugum temp=this.ilk;
+        while(){
+            temp=temp.getSonraki();
+        }
+        // if (elemanBul(deger) == 0) { // tempin üzerinde konumlandığı için silinemez fonk kullanılamaz
+        //     return -2;
+        // }
+    }
 }
