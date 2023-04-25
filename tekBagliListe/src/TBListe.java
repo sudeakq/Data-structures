@@ -155,5 +155,9 @@ public class TBListe {
         // fonk kullanılamaz
         // return -2;
         // } o ankıni değil sonraki kontrol edilmeli
+
+        // eleman silme işlemi ile ilgili kodlar
+        temp.setSonraki(temp.getSonraki().getSonraki());
+        return 0;
     }
 }
