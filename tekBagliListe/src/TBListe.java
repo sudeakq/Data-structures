@@ -121,7 +121,8 @@ public class TBListe {
     }
     // odev:aranan degerden listede kac tane oldugunu geri donduren fonksiyonu kodla
     // elemansay()
-    // odev2: araya ekle fonk sona ekle ile ilgili kısmının kontrolu ve yazılmasi
+    // odev2: araya ekle fonk sona ekle kullanılarak revize edilerek tekrar
+    // yazılması
     // odev3: araya ekle fonk degerleri sayisal olarak sıralı ekleyecek sekilde
     // yazılacak (indis parametresi olmayan)
 }
