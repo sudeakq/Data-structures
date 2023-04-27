@@ -9,10 +9,14 @@ public class Dugum {
         this.sonraki = null;
     }
 
-    public Dugum(int veri) {
-        this.veri = veri;
+    public Dugum(int deger) {
+        this.veri = deger;
         this.onceki = null;
         this.sonraki = null;
+    }
+
+    public void yazdir() {
+        System.out.println("" + this.veri);
     }
 
     public void setVeri(int veri) {
