@@ -41,4 +41,17 @@ public class CBListe {
         temp.setOnceki(temp);// mavi 2
 
     }
+
+    public void listele() {
+        Dugum temp = this.ilk;
+        if (temp == null) {
+            System.out.println("liste boş");
+            return;
+        }
+        while (temp != null) {
+            temp.yazdir();
+            temp = temp.getSonraki();
+        }
+        System.out.println("---------------");
+    }
 }
