@@ -103,7 +103,7 @@ public class CBListe {
             }
             temp = temp.getSonraki();
         }
-        // eleman silme işlemi ile ilgili kod
+        // eleman silme işlemi ile ilgili kod bloğu
 
         if (temp.getSonraki() != null) {
             temp.getSonraki().setOnceki(temp.getOnceki());
